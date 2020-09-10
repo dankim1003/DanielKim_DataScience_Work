@@ -1,0 +1,4 @@
+not track by github - if you go to folder in computer and you wouldn't see hidden file on github? (gitignore, ds_Store function and others)
+.DS_Store
+*py
+*$py.class
