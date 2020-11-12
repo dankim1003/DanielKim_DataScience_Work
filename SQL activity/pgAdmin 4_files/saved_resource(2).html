@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&sgid=1&sid=1&server_type=pg&did=16402 -->
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Miscellaneous_DB/postgres@PostgreSQL 11</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- To set pgAdmin4 shortcut icon in browser -->
+    <link rel="shortcut icon" href="http://127.0.0.1:55989/favicon.ico?ver=42400">
+
+    <!-- Base template stylesheets -->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link type="text/css" rel="stylesheet" href="./pgadmin.style.css">
+    <link type="text/css" rel="stylesheet" href="./pgadmin.css">
+
+     <!--View specified stylesheets-->
+    
+    <script>
+        /* This is used to change publicPath of webpack at runtime */
+        window.getChunkURL = function() {
+            return "/static/js/generated/";
+        };
+    </script>
+    <!-- Base template scripts -->
+    <script type="text/javascript" src="./require.min.js.다운로드"></script>
+    <script type="text/javascript">
+            require.config({
+                baseUrl: '',
+                urlArgs: 'ver=42400',
+                waitSeconds: 0,
+                shim: {},
+                paths: {
+                    sources: "/static/js",
+                    datagrid: "/static/js/generated/datagrid",
+                    sqleditor: "/static/js/generated/sqleditor",
+                    'pgadmin.browser.utils': "/browser/" + "js/utils",
+                    'pgadmin.browser.endpoints': "/browser/" + "js/endpoints",
+                    'pgadmin.browser.messages': "/browser/" + "js/messages",
+                    'pgadmin.server.supported_servers': "/browser/" + "server/supported_servers",
+                    'pgadmin.user_management.current_user': "/user_management/" + "current_user",
+                    'translations': "/tools/" + "translations"
+                }
+            });
+
+    </script>
+
+    <!-- View specified scripts -->
+    <script type="text/javascript" src="./vendor.main.js.다운로드"></script>
+    <script type="text/javascript" src="./vendor.others.js.다운로드"></script>
+    <script type="text/javascript" src="./pgadmin_commons.js.다운로드"></script>
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/browser_nodes" src="./browser_nodes.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/codemirror" src="./codemirror.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/slickgrid" src="./slickgrid.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/sqleditor" src="./sqleditor.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="translations" src="./translations.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.endpoints" src="./endpoints.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.utils" src="./utils.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.user_management.current_user" src="./current_user.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.messages" src="./messages.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.server.supported_servers" src="./supported_servers.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/gettext" src="./gettext.js.다운로드"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/pgadmin" src="./pgadmin.js.다운로드"></script><link id="wcTheme" rel="stylesheet" type="text/css" href="./webcabin.overrides(3).css"><style type="text/css" rel="stylesheet">.slickgrid_640185 .slick-header-column { left: 1000px; } .slickgrid_640185 .slick-top-panel { height:25px; } .slickgrid_640185 .slick-preheader-panel { height:25px; } .slickgrid_640185 .slick-headerrow-columns { height:25px; } .slickgrid_640185 .slick-footerrow-columns { height:25px; } .slickgrid_640185 .slick-cell { height:25px; } .slickgrid_640185 .slick-row { height:25px; } .slickgrid_640185 .l0 { } .slickgrid_640185 .r0 { } .slickgrid_640185 .l1 { } .slickgrid_640185 .r1 { } .slickgrid_640185 .l2 { } .slickgrid_640185 .r2 { }</style></head>
+<body tabindex="0" class="wcDesktop">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<style>
+    body {padding: 0px;}
+    </style>
+<div id="main-editor_panel">
+    <div class="sql-editor">
+        <div id="btn-toolbar" class="editor-toolbar" role="toolbar" aria-label="">
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-load-file" type="button" class="btn btn-sm btn-primary-icon btn-load-file" title="Open File (accesskey + O)" accesskey="O" tabindex="0" aria-label="Open File (accesskey + O)">
+                    <i class="fa fa-folder-open-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-save-file" type="button" class="btn btn-sm btn-primary-icon" title="Save File (accesskey + S)" accesskey="S" aria-label="Save File (accesskey + S)">
+                    <i class="fa fa-floppy-o sql-icon-lg" aria-hidden="true" tabindex="0" role="img"></i>
+                </button>
+                <button id="btn-file-menu-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0" style="display: block;">
+                            <span>Save</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save-as" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span>Save As</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-save-data" type="button" class="btn btn-sm btn-primary-icon" title="Save Data Changes (F6)" accesskey="" tabindex="0" disabled="" aria-label="Save Data Changes (F6)">
+                    <i class="pg-font-icon icon-save-data-changes sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-find" type="button" class="btn btn-sm btn-primary-icon" aria-label="Find" title="Find (Ctrl/Cmd+F)">
+                    <i class="fa fa-search sql-icon-lg" aria-hidden="true" tabindex="0" role="img"></i>
+                </button>
+                <button id="btn-find-menu-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Find (accesskey + N)" accesskey="N" tabindex="0" aria-label="Find (accesskey + N)">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Find                                  (Ctrl+F)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-next" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Find Next                                  (Ctrl+G)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-previous" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Find Previous                                  (Ctrl+Shift+G)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-persistent" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span>Persistent Find</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Replace                                  (Ctrl+Shift+F)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace-all" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span>Replace All</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-jump" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span>Jump (Alt+G)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-copy-row" type="button" class="btn btn-sm btn-primary-icon" title="Copy (accesskey + C)" accesskey="C" tabindex="0" aria-label="Copy (accesskey + C)">
+                    <i class="fa fa-files-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-copy-row-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-copy-with-header" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="copy-with-header fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Copy with headers </span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="btn-paste-row" type="button" class="btn btn-sm btn-primary-icon" title="Paste (accesskey + P)" accesskey="P" tabindex="0" disabled="" aria-label="Paste (accesskey + P)">
+                    <i class="fa fa-clipboard sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-delete-row" type="button" class="btn btn-sm btn-primary-icon" title="Delete (accesskey + D)" accesskey="D" tabindex="0" disabled="" aria-label="Delete (accesskey + D)">
+                    <i class="fa fa-trash sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-edit-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Edit" title="Edit" tabindex="0">
+                    <i class="fa fa-pencil-square-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-indent-code" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Indent Selection (Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-unindent-code" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Unindent Selection (Shift+Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-comment-line" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Inline Comment Selection                                  (Ctrl+/)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-uncomment-line" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Inline Uncomment Selection                                  (Ctrl+.)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-toggle-comment-block" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Block Comment/Uncomment Selection                                  (Shift+Ctrl+/)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-filter" type="button" class="btn btn-secondary" title="Filter (accesskey + F)" accesskey="F" tabindex="0" disabled="" aria-label="Filter (accesskey + F)">
+                    <i class="fa fa-filter sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-filter-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter options (accesskey + I)" accesskey="I" disabled="" tabindex="0" aria-label="Filter options (accesskey + I)">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a id="btn-filter-menu" class="dropdown-item" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">Sort/Filter</a>
+                    </li>
+                    <li>
+                        <a id="btn-include-filter" class="dropdown-item" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">Filter by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-exclude-filter" class="dropdown-item" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">Exclude by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-remove-filter" class="dropdown-item" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">Remove Sort/Filter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <select id="btn-rows-limit" class="limit form-control form-control-sm" disabled="" title="Rows limit (accesskey + R)" accesskey="R" tabindex="0" aria-label="Rows limit (accesskey + R)">
+                    <option value="-1">No limit</option>
+                    <option value="1000">1000 rows</option>
+                    <option value="500">500 rows</option>
+                    <option value="100">100 rows</option>
+                </select>
+            </div>
+
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-cancel-query" type="button" class="btn btn-sm btn-primary-icon" title="Cancel query (accesskey + Q)" accesskey="Q" tabindex="0" aria-label="Cancel query (accesskey + Q)" disabled="">
+                    <i class="fa fa-stop sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-flash" data-test-selector="execute-refresh-button" type="button" class="btn btn-sm btn-primary-icon" style="width: 32px;" title="Execute/Refresh (F5)" tabindex="0" data-click-counter="0" aria-label="Execute/Refresh (F5)">
+                    <i class="fa fa-play sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-query-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="X" title="Execute options (accesskey + X)" tabindex="0" aria-label="Execute options (accesskey + X)">
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-commit" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="auto-commit fa fa-check" aria-hidden="true" role="img"></i>
+                            <span> Auto commit? </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-rollback" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="auto-rollback fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Auto rollback? </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-explain" type="button" class="btn btn-sm btn-primary-icon" title="Explain (F7)" accesskey="" tabindex="0" aria-label="Explain (F7)">
+                    <i class="fa fa-hand-pointer-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-explain-analyze" type="button" class="btn btn-sm btn-primary-icon" title="Explain Analyze (Shift+F7)" accesskey="" aria-label="Explain Analyze (Shift+F7)">
+                    <i class="fa fa-list-alt sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-explain-options-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-verbose" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-verbose fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Verbose </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-costs" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-costs fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Costs </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-buffers" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-buffers fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Buffers </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-timing" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-timing fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Timing </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="100000">
+                        <a class="dropdown-item" id="btn-explain-summary" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-summary fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Summary </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="120000" class="d-none">
+                        <a class="dropdown-item" id="btn-explain-settings" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <i class="explain-settings fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Settings </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-commit" type="button" class="btn btn-sm btn-primary-icon" title="Commit (Shift+Ctrl+M)" accesskey="" tabindex="0" disabled="" aria-label="Commit (Shift+Ctrl+M)">
+                    <i class="pg-font-icon icon-commit sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-rollback" type="button" class="btn btn-sm btn-primary-icon" title="Rollback (Shift+Ctrl+R)" tabindex="0" disabled="" aria-label="Rollback (Shift+Ctrl+R)">
+                    <i class="pg-font-icon icon-rollback sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-clear-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Clear (accesskey + L)" accesskey="L" tabindex="0" aria-label="Clear (accesskey + L)">
+                    <i class="fa fa-eraser sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-clear" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Clear Query Window </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-clear-history" href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="0">
+                            <span> Clear History </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button id="btn-download" type="button" class="btn btn-sm btn-primary-icon" title="Download as CSV/TXT (F8)" tabindex="0" aria-label="Download as CSV/TXT (F8)">
+                    <i class="fa fa-download sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="connection_status_wrapper d-flex">
+            <div id="btn-conn-status" role="status" class="connection_status d-flex justify-content-center align-items-center" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The session is idle and there is no current transaction." data-panel-visible="visible" accesskey="T" tabindex="0" data-original-title="" title="">
+                <i class="pg-font-icon icon-query-tool-connected" aria-hidden="true" title="Connection status (click for details) (accesskey + T)" role="img">
+                </i>
+            </div>
+            <div class="editor-title" style="background-color: ; color: ;">Miscellaneous_DB/postgres@PostgreSQL 11</div>
+        </div>
+        <div id="editor-panel" tabindex="0">
+            <div id="fetching_data" class="pg-sp-container sql-editor-busy-fetching d-none">
+                <div class="pg-sp-content">
+                    <div class="row">
+                        <div class="col-12 pg-sp-icon sql-editor-busy-icon"></div>
+                    </div>
+                    <div class="row"><div class="col-12 pg-sp-text sql-editor-busy-text">Loading data from the database server and rendering...</div></div>
+                </div>
+            </div>
+        <div class="wcDocker"><div class="wcDockerTransition"></div><div class="wcLayoutPane" style="height: 0px; top: 0px; left: 0px; right: 0px;"><div class="wcLayoutPane" style="width: 0px; left: 0px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 0px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab wcPanelTabActive" id="0"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Query Editor</a></div></div><div class="wcPanelTab" id="1"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Query History</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="output-panel" tabindex="0"><textarea id="sql_query_tool" tabindex="-1" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-simplescroll" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 256px; left: 391.453px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="SQL editor" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none; right: 16px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 16px; width: 16px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -16px; border-right-width: 34px; min-height: 4439px; min-width: 3px; padding-right: 16px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- reference에 id (unique)한 값을 넣어야 됨. 아니면 안됨 (unique -&gt; serial primary key)</span></span></pre></div><div style="position: relative; z-index: 1;"><div class="CodeMirror-selected" style="position: absolute; left: 340.047px; top: 252px; width: 8.40625px; height: 21px;"></div></div><div class="CodeMirror-cursors" style="visibility: hidden;"></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- 1. Create a Customer table</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">create</span> <span class="cm-keyword">table</span> customer<span class="cm-bracket">(</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">id</span> <span class="cm-builtin">serial</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>first_name <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>last_name <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">primary</span> <span class="cm-keyword">key</span><span class="cm-bracket">(</span><span class="cm-keyword">id</span><span class="cm-bracket">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-bracket">)</span><span class="cm-punctuation">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- 2. Populate that table</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- 'Bob Smith', 'Jane Davidson', 'Jimmy Bell', and 'Stephanie Duke'</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">INSERT</span> <span class="cm-keyword">INTO</span> customer <span class="cm-bracket">(</span>first_name<span class="cm-punctuation">,</span> last_n<span class=" CodeMirror-selectedtext">a</span>me<span class="cm-bracket">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">VALUES</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-bracket">(</span><span class="cm-string">'Bob'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Smith'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-bracket">(</span><span class="cm-string">'Jane'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Davidson'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-bracket">(</span><span class="cm-string">'Jimmy'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Bell'</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-bracket">(</span><span class="cm-string">'Stephanie'</span><span class="cm-punctuation">,</span> <span class="cm-string">'Duke'</span><span class="cm-bracket">)</span><span class="cm-punctuation">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- 3. View Table</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> customer<span class="cm-punctuation">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">-- 4.. Create Customer Email table</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">drop</span> <span class="cm-keyword">table</span> customer_email<span class="cm-punctuation">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">create</span> <span class="cm-keyword">table</span> customer_email<span class="cm-bracket">(</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">id</span> <span class="cm-builtin">serial</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>email <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">50</span><span class="cm-bracket">)</span> <span class="cm-keyword">not</span> <span class="cm-atom">null</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>customer_id <span class="cm-builtin">int</span> <span class="cm-keyword">not</span> <span class="cm-atom">null</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -43px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 22px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">primary</span> <span class="cm-keyword">key</span><span class="cm-bracket">(</span><span class="cm-keyword">id</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 34px; width: 1px; border-bottom: 0px solid transparent; top: 4439px;"></div><div class="CodeMirror-gutters" style="height: 4473px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 30px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="history_grid" class="sql-editor-history-container d-flex" tabindex="0"><div style="width: calc(50% - 0.5px);"><div class="toggle-and-history-container">
+            <div class="query-history-toggle">
+                <label class="control-label">
+                    Show queries generated internally by pgAdmin?
+                </label>
+                <div class="toggle btn btn-success btn-xs quick" data-toggle="toggle" style="width: 0px; height: 0px;"><input id="generated-queries-toggle" type="checkbox" class="pgadmin-controls" data-style="quick" data-size="mini" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="ternary" checked=""><div class="toggle-group"><label class="btn btn-success btn-xs toggle-on">Yes</label><label class="btn btn-ternary btn-xs toggle-off">No</label><span class="toggle-handle btn btn-light btn-xs"></span></div></div>
+            </div>
+            <div id="query_list" class="query-history" tabindex="0"><div class="query-group" data-key="2020 11 04">
+            <div class="date-label">Today - 2020. 11. 4.</div>
+            <ul class="query-entries"><li class="list-item selected" tabindex="0" data-key="20:27:56">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from child_parent;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:27:56</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:22:29">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from child_parent;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:22:29</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:21:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from children;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:21:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:18:46">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  
+select children.child_name, child_parent.child_id, parents.parent_name,
+child_parent.parent_id
+from children
+left join child_parent on child_parent.child_id = children.child_id
+left join parents on child_parent.parent_id = parents.parent_id;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:18:46</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:18:24">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select children.child_name, child_parent.child_id, parents.parent_name,
+child_parent.parent_id
+from children
+left join child_parent on child_parent.id = children.child_id
+left join parents on child_parent.parent_id = parents.parent_id;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:18:24</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:16:12">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from child_parent;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:16:12</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:16:10">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  ect * from child_parent;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:16:10</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:14:31">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  CREATE TABLE simpsons(
+  id SERIAL,
+  name VARCHAR,
+  "Social Security" INTEGER
+);
+
+INSERT INTO simpsons (name, "Social Security")
+VALUES
+  ('Homer', 111111111),
+  ('Marge', 222222222),
+  ('Lisa', 333333333),
+  ('Bart', 444444444),
+  ('Maggie', 555555555);
+
+-- One to Many
+-- Address Table
+CREATE TABLE address (
+  id INTEGER PRIMARY KEY,
+  address VARCHAR
+);
+
+-- Insertion query for address table
+INSERT INTO address (id, address)
+VALUES
+  (11, '742 Evergreen Terrace'),
+  (12, '221b Baker Streer');
+
+-- People Table
+CREATE TABLE people (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR,
+  social_security INTEGER,
+  address_id INTEGER
+);
+
+-- Isertion query for people table
+INSERT INTO people (id, name, social_security)
+VALUES
+  (1, 'Homer', 111111111),
+  (2, 'Marge', 222222222),
+  (3, 'Lisa', 333333333),
+  (4, 'Bart', 444444444),
+  (5, 'Maggie', 555555555),
+  (6, 'Sherlock', 666666666),
+  (7, 'Watson', 777777777);
+
+-- Many to Many
+-- Table schema for the Simpsons children
+CREATE TABLE children(
+  child_id SERIAL,
+  child_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (child_id)
+);
+
+-- Insertion queries for the Simpsons children
+INSERT INTO children (child_name)
+VALUES
+  ('Bart'),
+  ('Lisa'),
+  ('Maggie');
+
+-- Table schema for the Simpsons parents
+CREATE TABLE parents(
+  parent_id INTEGER NOT NULL,
+  parent_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (parent_id)
+);
+
+-- Insertion queries for the Simpsons parents
+INSERT INTO parents (parent_id, parent_name)
+VALUES
+  (11, 'Homer'),
+  (12, 'Marge');
+
+-- Table schema for the junction table
+CREATE TABLE child_parent (
+  child_id INTEGER NOT NULL,
+  FOREIGN KEY (child_id) REFERENCES children(child_id),
+  parent_id INTEGER NOT NULL,
+  FOREIGN KEY (parent_id) REFERENCES parents(parent_id),
+  PRIMARY KEY (child_id, parent_id)
+);
+
+-- Insertion queries for the junction table
+INSERT INTO child_parent (child_id, parent_id)
+VALUES
+  (1, 11),
+  (1, 12),
+  (2, 11),
+  (2, 12),
+  (3, 11),
+  (3, 12);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:14:31</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:14:07">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  -- Simpson table
+CREATE TABLE simpsons(
+  id SERIAL,
+  name VARCHAR,
+  "Social Security" INTEGER
+);
+​
+INSERT INTO simpsons (name, "Social Security")
+VALUES
+  ('Homer', 111111111),
+  ('Marge', 222222222),
+  ('Lisa', 333333333),
+  ('Bart', 444444444),
+  ('Maggie', 555555555);
+​
+-- One to Many
+-- Address Table
+CREATE TABLE address (
+  id INTEGER PRIMARY KEY,
+  address VARCHAR
+);
+​
+-- Insertion query for address table
+INSERT INTO address (id, address)
+VALUES
+  (11, '742 Evergreen Terrace'),
+  (12, '221b Baker Streer');
+​
+-- People Table
+CREATE TABLE people (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR,
+  social_security INTEGER,
+  address_id INTEGER
+);
+​
+-- Insertion query for people table
+INSERT INTO people (id, name, social_security)
+VALUES
+  (1, 'Homer', 111111111),
+  (2, 'Marge', 222222222),
+  (3, 'Lisa', 333333333),
+  (4, 'Bart', 444444444),
+  (5, 'Maggie', 555555555),
+  (6, 'Sherlock', 666666666),
+  (7, 'Watson', 777777777);
+​
+-- Many to Many
+-- Table schema for the Simpsons children
+CREATE TABLE children(
+  child_id SERIAL,
+  child_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (child_id)
+);
+​
+-- Insertion queries for the Simpsons children
+INSERT INTO children (child_name)
+VALUES
+  ('Bart'),
+  ('Lisa'),
+  ('Maggie');
+​
+-- Table schema for the Simpsons parents
+CREATE TABLE parents(
+  parent_id INTEGER NOT NULL,
+  parent_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (parent_id)
+);
+​
+-- Insertion queries for the Simpsons parents
+INSERT INTO parents (parent_id, parent_name)
+VALUES
+  (11, 'Homer'),
+  (12, 'Marge');
+​
+-- Table schema for the junction table
+CREATE TABLE child_parent (
+  child_id INTEGER NOT NULL,
+  FOREIGN KEY (child_id) REFERENCES children(child_id),
+  parent_id INTEGER NOT NULL,
+  FOREIGN KEY (parent_id) REFERENCES parents(parent_id),
+  PRIMARY KEY (child_id, parent_id)
+);
+​
+-- Insertion queries for the junction table
+INSERT INTO child_parent (child_id, parent_id)
+VALUES
+  (1, 11),
+  (1, 12),
+  (2, 11),
+  (2, 12),
+  (3, 11),
+  (3, 12);
+
+
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:14:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:07:40">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  
+select customer.first_name, customer.last_name, email.email, phone.number
+from customer
+join customer_email as email
+on customer.id = email.customer_id
+join phone
+on customer.id = phone.customer_id;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:07:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:07:40">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  
+select customer.first_name, customer.last_name, email.email, phone.number
+from customer
+join customer_email as email
+on customer.id = email.customer_id
+join phone
+on customer.id = phone.customer_id;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:07:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:07:00">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select customer.first_name, customer.last_name, email.email, phone.number
+from customer
+join customer_email as email
+on customer.id = email.customer_id
+join customer_phone as phone
+on customer.id = phone.customer_id;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:07:00</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:05:18">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from phone;
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:05:18</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:05:07">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO phone (customer_id, number)
+VALUES
+  (1,'435-344-2245'),
+  (2,'332-776-4678'),
+  (3,'221-634-7753'),
+  (4,'445-663-5799');
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:05:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:04:26">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table phone(
+	id serial,
+	number varchar(50) not null,
+	customer_id int not null,
+	primary key(id),
+	foreign key (customer_id) references customer(id) 
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:04:26</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:03:22">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  
+select * from customer_email;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:03:22</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:03:19">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer_email (customer_id, email)
+VALUES
+  (1,'bobsmith@email.com'),
+  (2,'jdavids@email.com'),
+  (3,'jimmyb@email.com'),
+  (4,'sd@email.com');
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:03:19</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:02:28">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from customer_email;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:02:28</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:01:10">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	id serial,
+	email varchar(50) not null,
+	customer_id int not null,
+	primary key(id),
+	foreign key (customer_id) references customer(id) 
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:01:10</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:01:02">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	id serial,
+	email varchar(50) not null,
+	customer_id int not null,
+	primary key(id),
+	foreign key (customer_id) references customer(first_name) 
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:01:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:00:50">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	id serial,
+	email varchar(50) not null,
+	customer_id int not null,
+	primary key(id)
+	foreign key (customer_id) references customer(first_name) 
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:00:50</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:00:27">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	id serial,
+	email varchar(50) not null,
+	customer_id int not null,
+	primary key(id)
+	foreign key (customer_id) references customer(id) 
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:00:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:00:18">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	id serial,
+	email varchar(50) not null,
+	customer_id int not null,
+	primary key(id)
+	foreign key (customer_id) references customer(first_name) 
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:00:18</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:59:59">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  drop table customer_email;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:59:59</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:59:43">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  SELECT * FROM customer;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:59:43</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:59:40">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer (first_name, last_name)
+VALUES
+  ('Bob', 'Smith'),
+  ('Jane', 'Davidson'),
+  ('Jimmy', 'Bell'),
+  ('Stephanie', 'Duke');
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:59:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:59:34">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer(
+	id serial,
+	first_name varchar(50),
+	last_name varchar(50),
+	primary key(id)
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:59:34</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:59:10">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  drop table customer;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:59:10</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:58:07">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  drop table customer_email;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:58:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:55:06">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  drop table customer_email;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:55:06</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:54:30">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  select * from customer_email;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:54:30</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:54:11">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer_email (customer_email)
+VALUES
+  ('bobsmith@email.com'),
+  ('jdavids@email.com'),
+  ('jimmyb@email.com'),
+  ('sd@email.com');
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:54:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:53:49">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	customer_email varchar(50)
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:53:49</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:53:45">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer (customer_email)
+VALUES
+  ('bobsmith@email.com'),
+  ('jdavids@email.com'),
+  ('jimmyb@email.com'),
+  ('sd@email.com');
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:53:45</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:53:33">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer (customer_email)
+VALUES
+  ('bobsmith@email.com'),
+  ('jdavids@email.com'),
+  ('jimmyb@email.com'),
+  ('sd@email.com');
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:53:33</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:52:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	customer_email varchar(50)
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:52:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:52:11">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  drop table customer_email;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:52:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:51:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  INSERT INTO customer (first_name, last_name)
+VALUES
+  ('Bob', 'Smith'),
+  ('Jane', 'Davidson'),
+  ('Jimmy', 'Bell'),
+  ('Stephanie', 'Duke');
+
+SELECT * FROM customer;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:51:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:50:14">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer_email(
+	customer_email varchar(50)
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:50:14</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:49:16">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer(
+	first_name varchar(50),
+	last_name varchar(50)
+);
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:49:16</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:49:08">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg icon-view-data" role="img"></span>
+                  create table customer(
+	first_name varchar(50),
+	last_name varchar(50),
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:49:08</div>
+              </div>
+          </div>
+      </li></ul>
+        </div><div class="query-group" data-key="2020 11 02">
+            <div class="date-label">2020. 11. 2.</div>
+            <ul class="query-entries"><li class="list-item" tabindex="0" data-key="18:52:08">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  drop table players;
+drop table matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:52:08</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:49:27">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:49:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:49:21">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  
+create table players(
+	player_id INT,
+	first_name varchar,
+	last_name varchar,
+	hand varchar,
+	country_code varchar);
+	
+create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	loser_rank int,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:49:21</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:49:17">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  drop table players;
+drop table matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:49:17</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:47:14">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  
+select * from matches;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:47:14</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:47:11">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  
+create table players(
+	player_id INT,
+	first_name varchar,
+	last_name varchar,
+	hand varchar,
+	country_code varchar);
+	
+create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	loser_rank int,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:47:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:47:07">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  drop table players;
+drop table matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:47:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:46:31">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  create table players(
+	player_id INT,
+	first_name varchar,
+	last_name varchar,
+	hand varchar,
+	country_code varchar);
+	
+create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	loser_rank int,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+	
+select * from matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:46:31</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:46:01">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	loser_rank int,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+	
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:46:01</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:45:53">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  	
+select * from matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:45:53</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:45:27">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  	
+create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	loser_rank int,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+	
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:45:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:44:02">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from matches;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:44:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:43:55">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from players;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:43:55</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:41:18">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from players;
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:41:18</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:40:33">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:40:33</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:40:08">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  create table players(
+	player_id INT,
+	first_name varchar,
+	last_name varchar,
+	hand varchar,
+	country_code varchar);
+	
+create table matches(
+	loser_age dec,
+	loser_id int,
+	loser_name varchar,
+	winner_age dec,
+	winner_id int,
+	winner_name varchar,
+	winner_rank int);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:40:08</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:52:22">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  CREATE TABLE players (
+	player_id INT,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	hand VARCHAR,
+	country_code VARCHAR
+);
+
+CREATE TABLE matches (
+	loser_age DEC,
+	loser_id INT,
+	loser_name VARCHAR,
+	loser_rank INT,
+	winner_age DEC,
+	winner_id INT,
+	winner_name VARCHAR,
+	winner_rank INT
+);
+	
+select * from matches;
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:52:22</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:52:12">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  CREATE TABLE players (
+	player_id INT,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	hand VARCHAR,
+	country_code VARCHAR
+);
+​
+CREATE TABLE matches (
+	loser_age DEC,
+	loser_id INT,
+	loser_name VARCHAR,
+	loser_rank INT,
+	winner_age DEC,
+	winner_id INT,
+	winner_name VARCHAR,
+	winner_rank INT
+);
+	
+select * from matches;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:52:12</div>
+              </div>
+          </div>
+      </li></ul>
+        </div><div class="query-group" data-key="2020 10 31">
+            <div class="date-label">2020. 10. 31.</div>
+            <ul class="query-entries"><li class="list-item" tabindex="0" data-key="13:37:57">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from worldassociation
+where word1 = 'pie'
+or word2 = 'pie';
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">13:37:57</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="13:37:54">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from worldassociation
+where author &gt;= 0
+and author &lt;= 10;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">13:37:54</div>
+              </div>
+          </div>
+      </li></ul>
+        </div></div>
+        </div></div><div class="gutter gutter-horizontal" style="width: 1px;"></div><div style="width: calc(50% - 0.5px);"><div id="query_detail" class="query-detail">
+            <div class="error-message-block d-none"></div>
+            <div class="info-message-block d-none"></div>
+            <div class="metadata-block"><div class="metadata"><div class="item">
+                  <span class="value">2020. 11. 4. 오후 8:27:56</span>
+                  <span class="description">Date</span>
+              </div><div class="item">
+                  <span class="value">6</span>
+                  <span class="description">Rows Affected</span>
+              </div><div class="item">
+                  <span class="value">102 msec</span>
+                  <span class="description">Duration</span>
+              </div></div></div>
+            <div class="query-statement-block">
+              <div id="history-detail-query">
+                <button class="btn-copy copy-all" tabindex="0" accesskey="y">Copy</button>
+                <button class="btn-copy-editor copy-to-editor" tabindex="0" accesskey="y">Copy to Query Editor</button>
+                <div><div class="CodeMirror cm-s-default" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="-1" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 51px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="display: block; right: 0px; left: 0px;"><div style="height: 100%; min-height: 1px; width: 53px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> <span class="cm-operator">*</span> <span class="cm-keyword">from</span> child_parent<span class="cm-punctuation">;</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div>
+              </div>
+            </div>
+            <div>
+              <hr class="block-divider">
+            </div>
+            <div class="message-block">
+              <div class="message">
+                <div class="message-header">Messages</div>
+                <div class="content"><pre class="content-value">Successfully run. Total query runtime: 102 msec.
+6 rows affected.</pre></div>
+              </div>
+            </div>
+        </div></div></div></div></td></tr></tbody></table></div></div></div></div><div class="wcLayoutPane" style="right: 0px; width: 103px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 0px;"><div class="wcFrameTitle"><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Scratch Pad</a></div><div class="wcTabScroller" style="left: 0px;"></div><div class="wcFrameButtonBar" style="min-width: 48px; width: 48px; right: 24px;"><div class="wcFrameButton" title="Scroll tabs to the left." aria-label="Scroll left" tabindex="0"><span class="fa fa-chevron-left"></span></div><div class="wcFrameButton" title="Scroll tabs to the right." aria-label="Scroll right" tabindex="0"><span class="fa fa-chevron-right"></span></div></div></div><div class="wcFrameButtonBar" style="min-width: 24px; width: 24px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style=""><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-scratch"><textarea wrap="off" tabindex="0"></textarea></div></div></td></tr></tbody></table></div></div></div></div><div class="wcSplitterBar wcTall wcSplitterBarV" style="left: -107px; top: 0px; height: 0px;"><div class="wcSplitterBarLine"></div></div></div><div class="wcLayoutPane" style="bottom: 0px; height: 103px; left: 0px; right: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 0px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab wcPanelTabActive" id="0"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Data Output</a></div></div><div class="wcPanelTab" id="1"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Explain</a></div></div><div class="wcPanelTab" id="2"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Messages</a></div></div><div class="wcPanelTab" id="3"><div><a href="http://127.0.0.1:55989/datagrid/panel/7202324?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=16402#" tabindex="-1" class="panel-link-heading">Notifications</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content hide-vertical-scrollbar"><div id="datagrid" class="sql-editor-grid-container text-12 ui-widget slickgrid_640185" tabindex="0" style="height: 0px; overflow: hidden; outline: 0px; position: relative;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-header ui-state-default"><div class="slick-header-columns" style="left: -1000px; width: 1989px;" unselectable="on"><div class="ui-state-default slick-header-column" id="slickgrid_640185row-header-column" title="" style="width: 24px;"><span class="slick-column-name"><span data-id="select-all" title="Select/Deselect All"><br><img class="select-all-icon" src="./select-all-icon.png"></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_640185child_id" title="Editable column" style="width: 100px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="child_id">  <span class="column-description">    <span class="column-name">child_id</span>    <span class="column-type">[PK] integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_640185parent_id" title="Editable column" style="width: 100px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="parent_id">  <span class="column-description">    <span class="column-name">parent_id</span>    <span class="column-type">[PK] integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div></div></div><div class="slick-headerrow ui-state-default" style="display: none;"><div class="slick-headerrow-columns" style="width: 245px;"></div><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 261px;"></div></div><div class="slick-top-panel-scroller ui-state-default" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport" style="width: 100%; overflow: auto; outline: 0px; position: relative; height: 0px;"><div class="grid-canvas" style="height: 175px; width: 245px;"><div class="ui-widget-content slick-row even" style="top:0px"><div class="slick-cell l0 r0"><span data-row="0" data-cell-type="row-header-selector">1</span></div></div><div class="ui-widget-content slick-row odd" style="top:25px"><div class="slick-cell l0 r0"><span data-row="1" data-cell-type="row-header-selector">2</span></div></div><div class="ui-widget-content slick-row even" style="top:50px"><div class="slick-cell l0 r0"><span data-row="2" data-cell-type="row-header-selector">3</span></div></div><div class="ui-widget-content slick-row odd" style="top:75px"><div class="slick-cell l0 r0"><span data-row="3" data-cell-type="row-header-selector">4</span></div></div><div class="ui-widget-content slick-row even" style="top:100px"><div class="slick-cell l0 r0"><span data-row="4" data-cell-type="row-header-selector">5</span></div></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-editor-explain" tabindex="0"></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="2"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div role="status" class="sql-editor-message" tabindex="0">Successfully run. Total query runtime: 102 msec.
+6 rows affected.</div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="3"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="notification_grid" class="sql-editor-notifications" tabindex="0"><table class="backgrid presentation table table-bordered table-hover table-noouter-border table-bottom-border" role="table"><thead><tr><th class="sortable renderable recorded_time" role="columnheader"><button>Recorded time<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable channel" role="columnheader"><button>Event<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable pid" role="columnheader"><button>Process ID<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable payload" role="columnheader"><button>Payload<span class="sort-caret" aria-hidden="true"></span></button></th></tr></thead><tbody><tr class="empty"><td colspan="4"><span>No data found</span></td></tr></tbody></table></div></div></td></tr></tbody></table></div></div></div></div><div class="wcSplitterBar wcWide wcSplitterBarH" style="top: -107px; left: 0px;"><div class="wcSplitterBarLine"></div></div></div></div>
+    </div>
+</div>
+<script>
+            require(['sources/generated/browser_nodes', 'sources/generated/codemirror', 'sources/generated/slickgrid'], function() {
+    require(['sources/generated/sqleditor'], function(ctx) {
+        var $ = pgAdmin.SqlEditor.jquery,
+            S = pgAdmin.SqlEditor.S,
+            editorPanel = $('.sql-editor'),
+            loadingDiv = $('#fetching_data'),
+            msgDiv = loadingDiv.find('.sql-editor-busy-text');
+
+        // Register unload event on window close.
+        /* If opened in new tab, close the connection only on tab/window close and
+         * not on refresh attempt because the user may cancel the reload
+         */
+        if(window.opener) {
+          $(window).on('unload', function(ev) {
+            $.ajax({
+              method: 'DELETE',
+              url: "/datagrid/" + "close/" + 7202324
+            });
+          });
+        } else {
+          $(window).on('beforeunload', function(ev) {
+            $.ajax({
+              method: 'DELETE',
+              url: "/datagrid/" + "close/" + 7202324
+            });
+          });
+        }
+
+        // Get the controller object from pgAdmin.SqlEditor
+        var sqlEditorController = pgAdmin.SqlEditor.create(editorPanel);
+
+        // Listen on events to show/hide loading-icon and change messages.
+        sqlEditorController.on('pgadmin-sqleditor:loading-icon:message', function(msg) {
+            msgDiv.text(msg);
+          }).on('pgadmin-sqleditor:loading-icon:show', function(msg) {
+            loadingDiv.removeClass('d-none');
+            msgDiv.text(msg);
+          }).on('pgadmin-sqleditor:loading-icon:hide', function() {
+            loadingDiv.addClass('d-none');
+          });
+                    var script_type_url = '';
+                // Start the query tool.
+        sqlEditorController.start(
+            7202324,
+            {"is_query_tool": "true", "sgid": "1", "sid": "1", "server_type": "pg", "did": "16402", "title": "Miscellaneous_DB/postgres@PostgreSQL 11"},
+            '{"floating":[],"root":{"type":"wcSplitter","horizontal":false,"isDrawer":false,"pane0":{"type":"wcSplitter","horizontal":true,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":1133.25,"y":273.735},"tab":0,"panels":[{"type":"wcPanel","panelType":"sql_panel","size":{"x":1133.25,"y":273.735},"customData":{}},{"type":"wcPanel","panelType":"history","size":{"x":1511,"y":273.735},"customData":{}}]},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":377.75,"y":273.735},"tab":0,"panels":[{"type":"wcPanel","panelType":"scratch","size":{"x":377.75,"y":273.735},"customData":{}}]},"pos":0.75},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":1511,"y":829.5},"tab":0,"panels":[{"type":"wcPanel","panelType":"data_output","size":{"x":1511,"y":829.5},"customData":{}},{"type":"wcPanel","panelType":"explain","size":{"x":1511,"y":829.5},"customData":{}},{"type":"wcPanel","panelType":"messages","size":{"x":1511,"y":829.5},"customData":{}},{"type":"wcPanel","panelType":"notifications","size":{"x":1511,"y":829.5},"customData":{}}]},"pos":0.6863666890530558}}'
+        );
+
+        // If opening from schema diff, set the generated script to the SQL Editor
+
+        var schema_ddl_diff = (window.opener !== null) ? window.opener.pgAdmin.ddl_diff : (window.parent !== null) ? window.parent.pgAdmin.ddl_diff : window.top.pgAdmin.ddl_diff;
+        sqlEditorController.set_value_to_editor(schema_ddl_diff);
+        if (window.opener !== null) window.opener.pgAdmin.ddl_diff = '';
+        else if (window.parent !== null) window.parent.pgAdmin.ddl_diff = '';
+        else if (window.top !== null) window.top.pgAdmin.ddl_diff = '';
+
+    });
+});
+
+</script>
+
+
+<div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"><p></p><label for="alertify-prompt-0" style="display: none;">HiddenLabel</label><input class="form-control" type="text" id="alertify-prompt-0"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify-notifier ajs-bottom ajs-right"></div></body></html>
