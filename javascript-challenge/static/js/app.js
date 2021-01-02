@@ -36,7 +36,7 @@
 var tableData = data;
 var tbody = d3.select("tbody");
 var form = d3.select("#form");
-var button = d3.select("#button");
+var button = d3.select("#filter-btn");
 var dropdownMenu = d3.select("#selDataset");
 
 
